@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AJAX Assignment-4</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="h1Ele"></h1>
+
+    <ol class="olEle"></ol>
+
+    <!-- Internal JS -->
+    <script>
+        // Select the elements
+        // Declared & Assigned
+        const bodyElement = document.querySelector('body');
+        const h1Element = document.querySelector('.h1Ele');
+        const olElement = document.querySelector('.olEle');
+
+        const alphabets = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+            'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+        ];
+
+        alphabets.forEach(function (ele) {
+            const anchorElement = document.createElement('a');
+            anchorElement.setAttribute('href', '#');
+
+            anchorElement.style.marginRight = '1rem';
+            anchorElement.style.textDecoration = 'none';
+            anchorElement.style.color = 'teal';
+
+            anchorElement.textContent = ele;
+            bodyElement.appendChild(anchorElement);
+
+            // Event Listener
+            anchorElement.addEventListener('click', function (e) {
+                const selectedValue = e.target.textContent;
+                console.log(selectedValue);
+
+                // AJAX Cycle
+                const xhrObject = new XMLHttpRequest();
+
+                xhrObject.open('GET', 'https://restcountries.com/v2/all?fields=name');
+
+                xhrObject.send();
+
+                // Event Handler property
+                xhrObject.onload = function () {
+                    const jsonData = JSON.parse(xhrObject.responseText);
+                    // console.log(jsonData);
+                    
+                    olElement.innerHTML = '';
+
+                    // Apply filter() on jsonData
+                    const result = jsonData.filter(function (ele) {
+
+                        // console.log(ele);
+                        if (selectedValue === ele.name[0]) {
+                            return ele;
+                        }
+                    });
+
+                    // console.log(result);
+
+                    // function declaration
+                    function liMaker(arr) {
+
+                        for (let i = 0; i < result.length; i++) {
+                            const liElement = document.createElement("li");
+                            liElement.textContent = `${result[i].name}`;
+                            liElement.style.color = '#8d99ae';
+
+                            olElement.appendChild(liElement);
+
+                            h1Element.textContent = `Listing ${result.length} Countries`;
+                            h1Element.style.color = '#ff4d6d';
+                        }
+
+                    }
+                    liMaker(result);
+
+                }
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

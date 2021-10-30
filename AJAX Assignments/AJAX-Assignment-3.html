@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AJAX Assignment-3</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="h1Ele"></h1>
+
+    <ol class="olEle"></ol>
+
+    <!-- Internal JS -->
+    <script>
+        // Select the elements
+
+        // Declared & Assigned
+        const bodyElement = document.querySelector('body');
+        const h1Element = document.querySelector('.h1Ele');
+        const olElement = document.querySelector('.olEle');
+
+        window.onload = function () {
+
+            const xhrObject = new XMLHttpRequest();
+
+            xhrObject.open('GET', 'https://restcountries.com/v2/all?fields=name,capital,population,latlng');
+
+            xhrObject.send();
+
+            // Event Handler property
+            xhrObject.onload = function () {
+                const jsonData = JSON.parse(xhrObject.responseText);
+                // console.log(jsonData);
+
+                h1Element.textContent = `Listing Countries :  ${jsonData.length}`;
+
+                // We use Traditional for...loop to iterate on every element in the array
+                for (let i = 0; i < jsonData.length; i++) {
+
+                    // Creating li tag and appending to the body
+                    const liElement = document.createElement('li');
+                    liElement.textContent = `${jsonData[i].name}`;
+                    liElement.style.marginBottom = `1rem`;
+
+                    olElement.appendChild(liElement);
+
+                    // Creating btn
+                    const btnElement = document.createElement('input');
+                    btnElement.setAttribute('type', 'button');
+                    btnElement.setAttribute('value', 'show');
+                    btnElement.style.marginLeft = '1rem';
+
+                    // console.log(btnElement);
+
+                    // Event Listener
+                    btnElement.addEventListener('click', function () {
+                        alert(
+                            `capital - ${jsonData[i].capital}, population - ${jsonData[i].population}, position - (${jsonData[i].latlng})`
+                            );
+                    });
+
+                    // Append to the body
+                    bodyElement.appendChild(btnElement);
+
+                    // Append to the li
+                    liElement.appendChild(btnElement);
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
