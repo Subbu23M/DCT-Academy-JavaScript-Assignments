@@ -100,12 +100,18 @@ console.log(str.charAt(0));
 
 // Process-1
 function nonRepeatedChar(a) {
-    const result = a.split('').filter(function (char) {
-        if (a.indexOf(char) === a.lastIndexOf(char)) {
-            return true;
+    // Declared & Assigned
+    let nonRepeatedCharacter = '';
+
+    // We use Traditional for...loop to iterate on every character in the string
+    for (let i = 0; i < a.length; i++){
+        if (a.indexOf(a.charAt(i)) === a.lastIndexOf(a.charAt(i))) {
+            // reassigned
+            nonRepeatedCharacter = nonRepeatedCharacter + a.charAt(i);
+            break;
         }
-    });
-    return result.join('');
+    }
+    return nonRepeatedCharacter;
 }
 
 // Process-2
