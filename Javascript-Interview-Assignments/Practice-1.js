@@ -98,12 +98,23 @@ console.log(str.indexOf('s'));
 console.log(str.lastIndexOf('s'));
 console.log(str.charAt(0));
 
+// Process-1
 function nonRepeatedChar(a) {
     const result = a.split('').filter(function (char) {
         if (a.indexOf(char) === a.lastIndexOf(char)) {
             return true;
         }
     });
+    return result.join('');
+}
+
+// Process-2
+function nonRepeatedChar(a){
+    const result = a.split('').filter((char) => {
+        if(a.indexOf(char) === a.lastIndexOf(char)){
+            return true;
+        }
+    })
     return result.join('');
 }
 // Invoke function
