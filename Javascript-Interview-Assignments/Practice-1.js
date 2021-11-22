@@ -131,12 +131,18 @@ console.log(nonRepeatedChar('dctacademy'));
 
 // 5)Highest occurred character in a String
 function highestOccurance(a) {
+//     Declared & Assigned
     let count = 0;
     let result = '';
+    
+    // reassigned
+    a = a.split('');
+    // console.log(a);
 
-    a.split('').forEach(function (char) {
-        if (a.split(char).length > count) {
-            count = a.split(char).length;
+    a.forEach(function (char) {
+        if (a.length > count) {
+//             reassigned
+            count = a.length;
             result = char;
         }
     })
