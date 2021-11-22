@@ -157,8 +157,8 @@ console.log(highestOccurance('aaaaaaaaaaaaaaaaabbbbcddddeeeeee'));
 // 6)check if two Strings are anagrams of each other
 function anagramCheck(a, b) {
     // Declared & Assigned
-    const str1 = a.split('').sort().join('').toLowerCase();
-    const str2 = b.split('').sort().join('').toLowerCase();
+    const str1 = a.toLowerCase().split('').sort().join('');
+    const str2 = b.toLowerCase().split('').sort().join('');
 
     return (str1 === str2);
 }
