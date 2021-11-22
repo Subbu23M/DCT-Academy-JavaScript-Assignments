@@ -124,7 +124,10 @@ console.log(giveMeSomething("something"));
 
 // 11) Football Points
 function footballPoints(a, b, c) {
-  return a * 3 + b * 1 + c * 0;
+  if (a, b, c >= 0) {
+        const result = (a * 3) + (b * 1) + (c * 0);
+        return result;
+    }
 }
 
 console.log(footballPoints(3, 4, 2));
@@ -135,7 +138,7 @@ console.log(footballPoints(0, 0, 1));
 
 // 12)The Farm Problem
 function animals(a, b, c) {
-  return a * 2 + b * 4 + c * 4;
+  return (a * 2) + (b * 4) + (c * 4);
 }
 
 console.log(animals(2, 3, 5));
@@ -157,7 +160,7 @@ console.log(checkEquality(1, 1));
 
 // 14) Correct the Mistakes
 function squared(b) {
-  return b * b;
+  return (b * b);
 }
 
 console.log(squared(5));
