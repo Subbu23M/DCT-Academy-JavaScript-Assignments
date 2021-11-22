@@ -76,18 +76,9 @@ console.log(isEmpty("a"));
 
 // 7)Less Than 100?
 function lessThan100(a, b) {
-  // Declared
-  let result;
-
-  if (a + b < 100) {
-    //Assigned
-    result = true;
-  } else {
-    // Assigned
-    result = false;
-  }
-
-  return result;
+    // Ternary Operator
+    const result = (a + b < 100) ? 'true' : 'false';
+    return result;
 }
 
 console.log(lessThan100(22, 15));
