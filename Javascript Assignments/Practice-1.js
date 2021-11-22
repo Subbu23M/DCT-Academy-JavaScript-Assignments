@@ -64,17 +64,9 @@ console.log(getFirstValue([-500, 0, 50]));
 
 // 6)Is the String Empty?
 function isEmpty(a) {
-  // Declared
-  let result;
-
-  if (a.length === 0) {
-    //Assign
-    result = true;
-  } else {
-    //Assign
-    result = false;
-  }
-  return result;
+    // Ternary Operator
+    const result = (a.length === 0) ? 'true' : 'false';
+    return result;
 }
 console.log(isEmpty(""));
 
