@@ -137,7 +137,7 @@ function highestOccurance(a) {
     
     // reassigned
     a = a.split('');
-    // console.log(a);
+    // console.log(a); returns array of elements
 
     a.forEach(function (char) {
         if (a.length > count) {
