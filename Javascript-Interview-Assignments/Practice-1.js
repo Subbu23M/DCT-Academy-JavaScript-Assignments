@@ -156,21 +156,16 @@ console.log(highestOccurance('aaaaaaaaaaaaaaaaabbbbcddddeeeeee'));
 
 // 6)check if two Strings are anagrams of each other
 function anagramCheck(a, b) {
-    const aLength = a.length;
-    const bLength = b.length;
+    // Declared & Assigned
+    const str1 = a.split('').sort().join('').toLowerCase();
+    const str2 = b.split('').sort().join('').toLowerCase();
 
-    if (aLength !== bLength) {
-        return false;
-    }
-
-    const str1 = a.split('').sort().join('');
-    const str2 = b.split('').sort().join('');
-
-    const result = (str1 === str2) ? 'true' : 'false';
-    return result;
+    return (str1 === str2);
 }
-
+// Invoke the function
 console.log(anagramCheck('Army', 'Mary'));
+
+// reusability
 console.log(anagramCheck('indian', 'ndiani'));
 
 // 7)Sort an array in place using QuickSort algorithm
