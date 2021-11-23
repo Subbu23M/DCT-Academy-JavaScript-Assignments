@@ -2,11 +2,9 @@
 
 // 1)Create a function that takes an integer and return true if it's divisible by 100, otherwise return false.
 function divisible(a) {
-    if (a % 100 === 0) {
-        return true;
-    } else {
-        return false;
-    }
+    // Ternary Operator
+    const result = (a % 100 === 0) ? 'true' : 'false';
+    return result;
 }
 
 // Declared & Assigned
