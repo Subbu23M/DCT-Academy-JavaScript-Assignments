@@ -70,17 +70,9 @@ console.log(arrStr.indexOf("bye"));
 
 // 5)Given two integers, a and b, return true if a can be divided evenly by b. Return false otherwise.
 function dividesEvenly(a, b) {
-    // Declared
-    let dividesEvenly1;
-
-    if (a % b === 0) {
-        //assigned
-        dividesEvenly1 = true;
-    } else {
-        // assigned
-        dividesEvenly1 = false;
-    }
-    return dividesEvenly1;
+    // Ternary Operator
+    const result = (a % b === 0) ? 'true' : 'false';
+    return result;
 }
 
 // Declared & Assigned
