@@ -112,6 +112,7 @@ const res2 = authenticate(passwordArray, 'Balrog');
 console.log(res2);
 
 // 4) Find Even or Odd
+// Process - 1
 function findEO(a) {
     // Declared
     let result;
@@ -126,6 +127,12 @@ function findEO(a) {
     return result;
 }
 
+// Process - 2
+function findEO(a) {
+    // Ternary Operator
+    const result = (a % 2 === 0) ? 'Even' : 'Odd';
+    return result;
+}
 console.log(findEO(10));
 
 // reusability
