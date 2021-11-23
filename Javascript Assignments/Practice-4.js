@@ -66,6 +66,7 @@ console.log(countUpThenDown(2));
 console.log(countUpThenDown(0));
 
 // 3)Authenticate
+// Process - 1
 function authenticate(arr, str) {
     // Declared
     let result;
@@ -81,6 +82,16 @@ function authenticate(arr, str) {
         }
     }
     return result;
+}
+
+// Process - 2
+function authenticate(a, b) {
+
+    for (let i = 0; i < a.length; i++) {
+        // Ternary Operator
+        const result = (a[i] === b) ? 'authenticated' : 'not authenticated';
+        return result;
+    }
 }
 
 // Declared & Assigned
