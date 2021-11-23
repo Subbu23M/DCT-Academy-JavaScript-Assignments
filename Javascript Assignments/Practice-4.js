@@ -3,8 +3,8 @@
 // Practice - SET 3
 
 //1) Create the function sumOfDigits that adds individual digits of a number, and returns the sum.
-
 // function declaration
+// Process - 1
 function sumOfDigits(num) {
     // Declared & Assigned
     let sum = 0;
@@ -25,7 +25,21 @@ function sumOfDigits(num) {
     }
     return sum;
 }
+// Process - 2
+function sumOfDigits(a) {
+    // reassigned
+    a = String(a).split('');
+    // console.log(a);
 
+    // Declared & Assigned
+    let sum = 0;
+
+    a.forEach((num) => {
+        // reassigned
+        sum = sum + Number(num);
+    })
+    return sum;
+}
 console.log(sumOfDigits(414));
 
 // reusability
