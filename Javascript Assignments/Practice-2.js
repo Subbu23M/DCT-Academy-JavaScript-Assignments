@@ -274,7 +274,7 @@ console.log(numArgs("true", "false"));
 console.log(numArgs({}));
 
 // 13)Create a function that takes two numbers num1, num2, and an array arr and returns an array containing all the numbers in arr greater than num1 and less than num2.
-
+// Process - 1
 function arrBetween(num1, num2, arr) {
     // Declared & Assigned
     const arrNum = [];
@@ -287,6 +287,18 @@ function arrBetween(num1, num2, arr) {
     return arrNum;
 }
 
+// Process - 2
+function arrBetween(a, b, c) {
+    // Declared & Assigned
+    const emptyArray = [];
+
+    c.forEach(function (num) {
+        if (num > a && num < b) {
+            emptyArray.push(num);
+        }
+    })
+    return emptyArray;
+}
 console.log(arrBetween(3, 8, [1, 5, 95, 0, 4, 7]));
 console.log(arrBetween(7, 32, [1, 2, 3, 78]));
 
