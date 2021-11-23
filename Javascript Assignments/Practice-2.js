@@ -88,6 +88,7 @@ const result3 = dividesEvenly(10, 3);
 console.log(result3);
 
 // 6)Create a function that takes an array and a string as arguments and return the index of the string.
+// Process - 1
 function findIndex(arr, str) {
     // Declared
     let result;
@@ -96,6 +97,20 @@ function findIndex(arr, str) {
         // assigned
         result = arr.indexOf(str);
     }
+    return result;
+}
+
+// Process - 2
+function findIndex(a, b) {
+    // Declared
+    let result;
+
+    a.forEach((word, index) => {
+        if (word === b) {
+            // reassigned
+            result = index;
+        }
+    })
     return result;
 }
 
