@@ -196,7 +196,7 @@ function check(a, b) {
         }
     }
 
-    return result3;
+    return Boolean(result3);
 }
 
 // Declared & Assigned
