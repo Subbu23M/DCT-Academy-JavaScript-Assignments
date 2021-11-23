@@ -256,6 +256,7 @@ console.log(multiplyMe(2));
 console.log(multiplyMe(3));
 
 // 9)The Array Cafe
+// Process - 1
 function findNotBookedTables(a) {
     // Declared & Assigned
     const tables = [];
@@ -265,14 +266,23 @@ function findNotBookedTables(a) {
             tables.push(i);
         }
     }
-
     if (a.length === 0) {
         return "empty array";
     }
-
     return tables;
 }
+// Process - 2
+function findNotBookedTables(a) {
+    // Declared & Assigned
+    const emptyArray = [];
 
+    a.forEach((str, i) => {
+        if (str === 'not booked') {
+            emptyArray.push(i)
+        }
+    })
+    return emptyArray;
+}
 console.log(
     findNotBookedTables([
         "not booked",
