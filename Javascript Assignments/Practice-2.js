@@ -26,10 +26,11 @@ console.log(frames(10, 1));
 console.log(frames(10, 25));
 
 // 3)Create a function that finds the word "bomb" in the given string. If found, return "Duck!!!", otherwise return "There is no bomb, relax.".
+// Process - 1
 function bomb(str) {
     // reassigned
     str = str.split(" ");
-    console.log(str);
+//     console.log(str);
 
     // Declared
     let result;
@@ -46,6 +47,12 @@ function bomb(str) {
     return result;
 }
 
+// Process - 2
+function bomb(a) {
+    // Ternary Operator
+    const result = a.includes('bomb') ? 'Duck!!!' : 'There is no bomb, relax.';
+    return result;
+}
 console.log(bomb("There is a bomb"));
 console.log(bomb("This goes boom!!!"));
 
