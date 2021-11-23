@@ -175,6 +175,7 @@ console.log(summation(8));
 */
 
 // 6)Sum positive Numbers
+// Process - 1
 function sumPos(a) {
     // Declared & Assigned
     let result = 0;
@@ -188,6 +189,19 @@ function sumPos(a) {
     return result;
 }
 
+// Process - 2
+function sumPos(a) {
+    // Declared & Assigned
+    let result = 0;
+
+    a.forEach((num) => {
+        if (num > 0) {
+            // reassigned
+            result = result + num;
+        }
+    })
+    return result;
+}
 console.log(sumPos([1, -4, 7, 12]));
 
 // reusability
