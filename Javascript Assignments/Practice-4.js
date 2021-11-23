@@ -229,6 +229,7 @@ console.log(strCount("Hello", "l"));
 console.log(strCount("", "z"));
 
 // 8)Simple Multiplication
+// Process - 1
 function multiplyMe(a) {
     // Declared
     let result;
@@ -243,6 +244,12 @@ function multiplyMe(a) {
     return result;
 }
 
+// Process - 2
+function multiplyMe(a) {
+    // Ternary Operator
+    const result = (a % 2 === 0) ? (a * 8) : (a * 9);
+    return result;
+}
 console.log(multiplyMe(2));
 
 // reusability
