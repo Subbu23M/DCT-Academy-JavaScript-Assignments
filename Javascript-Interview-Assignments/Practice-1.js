@@ -213,16 +213,22 @@ function makeDancing(a) {
     a = a.split('');
 
     let boolValue = false;
-
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] === ' ') {
+    
+    a.forEach((char, i) => {
+        if (char === ' ') {
             // reassigned
             boolValue = !boolValue;
         }
 
-        // Ternary Operator
-        (boolValue) ? (i % 2 === 0) ? result.push(a[i].toLowerCase()): result.push(a[i].toUpperCase()): (i % 2 === 0) ? result.push(a[i].toUpperCase()) : result.push(a[i].toLowerCase());
-    }
+        // Nested Ternary Operator
+        (boolValue) ?
+        (i % 2 === 0 ?
+            emptyArray.push(char.toLowerCase()) :
+            emptyArray.push(char.toUpperCase())) :
+        (i % 2 === 0 ?
+            emptyArray.push(char.toUpperCase()) :
+            emptyArray.push(char.toLowerCase()));
+    })
     return result.join('');
 }
 
