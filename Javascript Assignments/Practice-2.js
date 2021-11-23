@@ -155,6 +155,7 @@ console.log(!Boolean(1));
 
 console.log(Boolean(true));
 
+// Process - 1
 function flipBool(a) {
     // Declared
     let result1;
@@ -170,6 +171,12 @@ function flipBool(a) {
     return result1;
 }
 
+// Process - 2
+function flipBool(a) {
+    // Ternary Operator
+    const result = (Boolean(a)) ? 0 : 1;
+    return result;
+}
 console.log(flipBool(true));
 console.log(flipBool(false));
 console.log(flipBool(1));
