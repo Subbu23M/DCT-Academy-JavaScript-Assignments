@@ -217,19 +217,10 @@ console.log(check4);
 
 // 10)Create a function that returns true if a string contains any spaces.
 function hasSpaces(str) {
-    // Declared
-    let result2;
-
-    if (str.indexOf(" ") >= 0) {
-        // assigned
-        result2 = true;
-    } else {
-        // assigned
-        result2 = false;
-    }
-    return result2;
+    // Ternary Operator
+    const result = (a.indexOf(' ') >= 0) ? true : false;
+    return result;
 }
-
 console.log(hasSpaces("hello"));
 console.log(hasSpaces("hello,               world"));
 
