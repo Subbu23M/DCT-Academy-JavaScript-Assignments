@@ -4,10 +4,15 @@
 
 // 1)Write a function called appendToString, which accepts two strings.
 
+// Process - 1
 function appendToString(a, b) {
     return a + b;
 }
 
+// Process - 2
+function appendToString(a, b) {
+    return `${a} ${b}`;
+}
 console.log(appendToString("Hello", " World!"));
 
 // reusability
