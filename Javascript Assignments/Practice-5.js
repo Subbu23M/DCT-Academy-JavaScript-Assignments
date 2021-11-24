@@ -156,30 +156,28 @@ console.log(threeOddNumbers([1, 2, 3, 3, 2]));
 
 //8) Find the highest scoring word in the string
 function longestCharacter(str) {
-    // Declared & Assigned
-    const splitStr = str.split(' ');
-    console.log(splitStr);
-    console.log(splitStr[0]);
-
+    // reassigned
+    a = a.split('');
+    
     // Declared & Assigned
     const emptyArray1 = [];
 
-    for (let i = 0; i < splitStr.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         // Declared & Assigned
         let weight = 0;
 
-        for (let j = 0; j < splitStr[i].length; j++) {
+        for (let j = 0; j < a[i].length; j++) {
             // reassigned
-            weight = weight + splitStr[i].charCodeAt(j) - 96;
-            console.log(weight);
+            weight = weight + a[i].charCodeAt(j) - 96;
+//             console.log(weight);
         }
         emptyArray1.push(weight);
-        console.log(emptyArray1);
+//         console.log(emptyArray1);
     }
     // Declared & Assigned
     const finalResult1 = emptyArray1.indexOf(Math.max(...emptyArray1));
-    console.log(finalResult1);
-    return splitStr[finalResult1]
+//     console.log(finalResult1);
+    return a[finalResult1];
 }
 
 console.log(longestCharacter('a b c d e f'));
