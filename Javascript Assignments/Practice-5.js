@@ -43,6 +43,7 @@ console.log(min([5, 1, 4, 7, 1, 2]));
 console.log(min([-1, 6, 3, 2.2, -10, -4]));
 
 // 3)Square even numbers and return sum of squared
+// Process - 1
 function squareEvenNumbers(arr) {
     let result = 0;
 
@@ -52,6 +53,19 @@ function squareEvenNumbers(arr) {
         }
     }
     return result;
+}
+// Process - 2
+function squareEvenNumbers(a) {
+    // Declared & Assigned
+    let sum = 0;
+
+    a.forEach((num) => {
+        if (num % 2 === 0) {
+            // reassigned
+            sum = sum + (num * num);
+        }
+    })
+    return sum;
 }
 console.log(squareEvenNumbers([1, 2, 3, 4, 5]));
 
