@@ -133,33 +133,20 @@ console.log(entries({
 console.log(entries({}));
 
 // 7)Check array contains three odd numbers
-
-const arrNums = [0, 1, 2, 3]
-console.log(arrNums[0] + arrNums[2]);
-
 function threeOddNumbers(a) {
     // Declared
-    let result;
+    let boolValue;
 
-    // Declared & Assigned
-    let three = 0;
+    const sum = a[0] + a[1] + a[2];
+    // console.log(sum);
 
-    // We use for...loop to iterate on every element in the array
-    for (let i = 0; i < a.length; i = i + 2) {
-        // reassigned
-        three = three + a[i];
-
-        if (three % 2 === 1) {
-            // assigned
-            result = true;
-        } else {
-            // assigned
-            result = false;
-        }
+    if(sum % 2 === 1){
+        boolValue = true;
+    }else{
+        boolValue = false;
     }
-    return result;
+    return Boolean(boolValue);
 }
-
 console.log(threeOddNumbers([1, 2, 3, 4, 5]));
 
 // reusability
