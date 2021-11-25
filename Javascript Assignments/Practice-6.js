@@ -159,6 +159,7 @@ console.log(findTwins([]));
 console.log(findTwins([3, 1, 4, 2, 5]));
 
 // 6)Find the number of capitals in the string
+// Process - 1
 function totalCaps(a) {
 
     let count = 0;
@@ -171,7 +172,19 @@ function totalCaps(a) {
     }
     return count;
 }
+// Process - 2
+function totalCaps(a) {
+    // Declared & Assigned
+    let count = 0;
 
+    const result = a.join('').split('').forEach((char) => {
+        if (char === char.toUpperCase()) {
+            // reassigned
+            count = count + 1;
+        }
+    })
+    return count;
+}
 console.log(totalCaps(['AwesomE', 'ThIngs', 'hAppEning', 'HeRe']));
 
 // reusability
