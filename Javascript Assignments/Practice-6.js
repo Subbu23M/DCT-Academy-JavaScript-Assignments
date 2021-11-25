@@ -285,6 +285,7 @@ console.log(reverseVowels('aeiou'));
 console.log(reverseVowels('why try,shy fly?'));
 
 // 9)Get all array elements except those with specified indexes
+// Process - 1
 function arrayExcept(a, b) {
 
     const emptyArray = [];
@@ -297,6 +298,13 @@ function arrayExcept(a, b) {
         }
     }
     return emptyArray;
+}
+// Process - 2
+function arrayExcept(a, b) {
+    for (let i = b.length - 1; i >= 0; i--) {
+        a.splice(b[i], 1)
+    }
+    return a;
 }
 
 const arrOne = ['a', 'b', 'c', 'd', 'e'];
