@@ -331,7 +331,7 @@ function missingElement(a) {
     const maxNum = Math.max(...a);
 
     for (let i = minNum; i < maxNum; i++) {
-        if (a.indexOf(i) < 0) {
+        if (!a.includes(i) < 0) {
             // reassigned
             result = i;
         }
