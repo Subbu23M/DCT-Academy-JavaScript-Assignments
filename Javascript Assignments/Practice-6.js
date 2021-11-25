@@ -15,14 +15,13 @@ console.log(firstName.indexOf('s'));
 console.log(firstName.lastIndexOf('s'));
 console.log(firstName.charAt(0));
 
+// Process - 1
 function nonRepeatedChar(a) {
     let result = '';
-
     for (let i = 0; i < a.length; i++) {
         if (a.indexOf(a.charAt(i)) === a.lastIndexOf(a.charAt(i))) {
             console.log(a.charAt(i));
-            console.log(i);
-
+//             console.log(i);
             result = a.charAt(i);
             break;
         }
@@ -30,6 +29,15 @@ function nonRepeatedChar(a) {
     return result;
 }
 
+// Process - 2
+function nonRepeatedChar(a) {
+    const result = a.split('').filter((char) => {
+        if (a.indexOf(char) === a.lastIndexOf(char)) {
+            return true;
+        }
+    })
+    return result.join('');
+}
 console.log(nonRepeatedChar('abacddbec'));
 
 // 2)Factorial
