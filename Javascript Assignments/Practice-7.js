@@ -61,6 +61,7 @@ function numberOfOccurance(a, b) {
 console.log(numberOfOccurance('dct academy', 'c'));
 
 // 3)highest occurred character in a String
+// Process-1
 function highestOccurance(a) {
     let count = 0;
     let maxCharacterOccurence = '';
@@ -78,6 +79,24 @@ function highestOccurance(a) {
     return maxCharacterOccurence;
 }
 
+// Process-2
+function highestOccurance(a) {
+    // Declared & Assigned
+    let result = '';
+    let count = 0;
+
+    // reassigned
+    a = a.split('');
+
+    a.forEach((char) => {
+        if (a.length > count) {
+            // reassigned
+            count = a.length;
+            result = char;
+        }
+    })
+    return result;
+}
 console.log(highestOccurance('aaaaaaaaaaaaaaaaabbbbcddddeeeeee'));
 
 //4) Super Hero Powers
