@@ -306,9 +306,6 @@ function palindrome(str) {
     // Declared & Assigned
     let revStr = '';
 
-    // Declared & Assigned
-    let boolValue = false;
-
     if (str.length === 0) {
         return 'invalid input';
     }
@@ -317,14 +314,10 @@ function palindrome(str) {
     for (let i = str.length - 1; i >= 0; i--) {
         // reassigned
         revStr = revStr + str[i];
-
-        // Simple...if 
-        if (revStr === str) {
-            // reassigned
-            boolValue = true;
-        }
     }
-    return boolValue;
+    // Ternary Operator
+    const result = (revStr === str) ? 'true' : 'false'
+    return result;
 }
 
 console.log(palindrome('madam'));
