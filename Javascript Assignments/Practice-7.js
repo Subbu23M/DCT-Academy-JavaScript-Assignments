@@ -100,6 +100,8 @@ function highestOccurance(a) {
 console.log(highestOccurance('aaaaaaaaaaaaaaaaabbbbcddddeeeeee'));
 
 //4) Super Hero Powers
+
+// Process-1
 function superPower(arr, name) {
     // Declared & Assigned
     let result = '';
@@ -116,6 +118,24 @@ function superPower(arr, name) {
     return result;
 }
 
+// Process-2
+function superPower(a, b) {
+    // Declared & Assigned
+    let result = '';
+
+    a.forEach((obj) => {
+        // Object Destructuring - ES6
+        const {
+            name
+        } = obj;
+
+        if (name === b) {
+            // reassigned
+            result = obj.powers.join(', ');
+        }
+    })
+    return result;
+}
 const superHeroes = [{
         "name": "Molecule Man",
         "age": 29,
