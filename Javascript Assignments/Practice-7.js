@@ -32,6 +32,7 @@ console.log(balancedArray([1, 2, 1, 2, 1, 3]));
 console.log(balancedArray([20, 10]));
 
 // 2)Count the Number of Occurrences
+// Process-1
 function numberOfOccurance(a, b) {
     // Declared & Assigned
     let count = 0;
@@ -41,6 +42,20 @@ function numberOfOccurance(a, b) {
             count = count + 1;
         }
     }
+    return count;
+}
+
+// Process-2
+function numberOfOccurance(a, b) {
+    // Declared & Assigned
+    let count = 0;
+
+    a.split('').forEach((char) => {
+        if (char === b) {
+            // reassigned
+            count = count + 1;
+        }
+    })
     return count;
 }
 console.log(numberOfOccurance('dct academy', 'c'));
@@ -319,7 +334,6 @@ function palindrome(str) {
     const result = (revStr === str) ? 'true' : 'false'
     return result;
 }
-
 console.log(palindrome('madam'));
 
 // reusability
