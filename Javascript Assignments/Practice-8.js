@@ -244,11 +244,12 @@ console.log(set([1, 3, 3, 5, 5, 5]));
 console.log(set([4, 4, 4, 4]));
 
 // 10)Valid Zip Code
+// Process-1
 function isValid(a) {
     // Declared
     let result;
 
-    // Simple...if
+    // if...else
     if (Number(a) && a.length <= 6) {
         // Assigned
         result = true;
@@ -259,6 +260,12 @@ function isValid(a) {
     return result;
 }
 
+// Process-2
+function isValid(a) {
+    // Ternary Operator
+    const result = (Number(a) && a.length <= 6) ? 'true' : 'false';
+    return result;
+}
 // Invoke function
 console.log(isValid('560001'));
 
