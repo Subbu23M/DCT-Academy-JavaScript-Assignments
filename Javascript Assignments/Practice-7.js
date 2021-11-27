@@ -170,7 +170,7 @@ const superPower3 = superPower(superHeroes, 'Uppercut');
 console.log(superPower3);
 
 // 5)Sort an array of JavaScript objects
-let library = [{
+const library = [{
         title: 'The Road Ahead',
         author: 'Bill Gates',
         libraryID: 1254
@@ -199,11 +199,10 @@ function sortArrayOfObjects(arr) {
     })
     return result;
 }
-
 console.log(sortArrayOfObjects(library));
 
 // 6)Sort an array of JavaScript objects
-let library = [{
+const library = [{
         author: 'Bill Gates',
         title: 'The Road Ahead',
         libraryID: 1254,
@@ -242,7 +241,6 @@ function sortArrayOfObjects(arr) {
     return resullt;
 
 }
-
 console.log(sortArrayOfObjects(library));
 
 // 7)Traverse Object - Quiz
