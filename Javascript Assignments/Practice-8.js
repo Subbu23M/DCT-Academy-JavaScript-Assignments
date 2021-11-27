@@ -61,6 +61,7 @@ console.log(countVowels('Yankees'));
 console.log(countVowels('symphysy'));
 
 // 2)Repeating Letters
+// Process-1
 function doubleChar(a) {
     // Declared & Assigned
     let result = '';
@@ -68,6 +69,18 @@ function doubleChar(a) {
     for (let i = 0; i < a.length; i++) {
         result = result + a[i].repeat(2);
     }
+    return result;
+}
+
+// Process-2
+function doubleChar(a) {
+    // Declared & Assigned
+    let result = '';
+
+    a.split('').forEach((char) => {
+        // reassigned
+        result = result + char.repeat(2);
+    })
     return result;
 }
 // Invoke function
