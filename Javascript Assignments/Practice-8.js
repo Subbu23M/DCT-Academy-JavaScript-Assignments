@@ -218,6 +218,7 @@ console.log(firstVowel('STRAWBERRY'));
 console.log(firstVowel('pInEaPPLe'));
 
 // 9)Transform into an Array with No Duplicates
+// Process-1
 function set(a) {
 
     const res = new Set(a);
@@ -227,6 +228,15 @@ function set(a) {
     return result;
 }
 
+// Process-2
+function set(a) {
+    const result = a.filter((num, i) => {
+        if (a.indexOf(num) === i) {
+            return true;
+        }
+    })
+    return result;
+}
 // Invoke function
 console.log(set([1, 3, 3, 5, 5, 5]));
 
