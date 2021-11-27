@@ -103,6 +103,7 @@ console.log(tuckIn([1, 10], [2, 3, 4, 5, 6, 7, 8, 9]));
 console.log(tuckIn([15, 150], [45, 75, 35]));
 
 // 4)What's Hiding Amongst the Crowd?
+// Process-1
 function detectWord(a) {
     // Declared & Assigned
     let result = '';
@@ -116,6 +117,19 @@ function detectWord(a) {
     return result;
 }
 
+// Process-2
+function detectWord(a) {
+    // Declared & Assigned
+    let result = '';
+
+    a.split('').forEach((char) => {
+        if (char === char.toLowerCase()) {
+            // reassigned
+            result = result + char;
+        }
+    })
+    return result;
+}
 // Invoke function
 console.log(detectWord('bEEFGBuFBRrHgUHlNFYaYr'));
 
