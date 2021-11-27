@@ -1,6 +1,7 @@
 // Practice Set-8 27/09/2021
 
 // 1)Count the Number of Vowels
+// Process-1
 function countVowels(str) {
     // Here parameters acts as Local variables and placeholders
     // reassigned
@@ -22,6 +23,32 @@ function countVowels(str) {
     return count;
 }
 
+// Process - 2
+function vowelCount(a) {
+    // Declared & Assigned
+    let count = 0;
+
+    // reassigned
+    a = a.toLowerCase();
+
+    // ES6-Spread Operator, we can convert string to array of characters
+    const aSplit = [...a];
+    // console.log(aSplit);
+
+    aSplit.forEach((char) => {
+        if (
+            char === 'a' ||
+            char === 'e' ||
+            char === 'i' ||
+            char === 'o' ||
+            char === 'u'
+        ) {
+            // reassigned
+            count = count + 1;
+        }
+    })
+    return count;
+}
 // Invoke function
 console.log(countVowels('The quick brown fox'));
 
