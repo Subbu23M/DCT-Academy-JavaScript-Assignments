@@ -30,6 +30,7 @@ console.log(isPrime(4));
 console.log(isPrime(17));
 
 //2)Find largest and smallest number in unsorted array
+// Process-1
 function maxMinOfArray(a) {
     // Declared & Assigned
     let maxNum = a[0];
@@ -47,6 +48,25 @@ function maxMinOfArray(a) {
     }
     const result = [maxNum, minNum];
     return result;
+}
+// Process-2
+function maxMinOfArray(a) {
+    // Declared & Assigned
+    let maxNum = a[0];
+    let minNum = a[0];
+
+    a.forEach((num) => {
+        if (maxNum < num) {
+            // reassigned
+            maxNum = num;
+        }
+
+        if (minNum > num) {
+            // reassigned
+            minNum = num;
+        }
+    })
+    return [maxNum, minNum];
 }
 // Invoke function
 console.log(maxMinOfArray([1, 5, 15, 4, 7, 3]));
