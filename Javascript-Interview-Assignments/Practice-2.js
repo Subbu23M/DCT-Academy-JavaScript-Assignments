@@ -263,7 +263,7 @@ function nonRepeatedSum(a) {
     })
 
     const resultArray = result;
-    // console.log(resultArray);
+    console.log(resultArray);
 
     // Declared & Assigned
     let sum = 0;
