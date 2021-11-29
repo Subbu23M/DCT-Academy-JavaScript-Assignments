@@ -238,6 +238,7 @@ console.log(transformedString('addba'));
 console.log(transformedString('aaabbdcccccf'));
 
 // 10)Find the sum of the numbers which do not repeat in the array
+// Process-1
 function nonRepeatedSum(a) {
     const result = a.filter(function (ele) {
         if (a.indexOf(ele) === a.lastIndexOf(ele)) {
@@ -251,6 +252,26 @@ function nonRepeatedSum(a) {
     for (let i = 0; i < resultArr.length; i++) {
         sum = sum + resultArr[i];
     }
+    return sum;
+}
+// Process-2
+function nonRepeatedSum(a) {
+    const result = a.filter((num) => {
+        if (a.indexOf(num) === a.lastIndexOf(num)) {
+            return true;
+        }
+    })
+
+    const resultArray = result;
+    // console.log(resultArray);
+
+    // Declared & Assigned
+    let sum = 0;
+
+    resultArray.forEach((num) => {
+        // reassigned
+        sum = sum + num;
+    })
     return sum;
 }
 // Invoke function
