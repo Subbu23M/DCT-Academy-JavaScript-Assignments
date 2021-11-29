@@ -143,18 +143,24 @@ console.log(wave('hello'));
 console.log(wave('gap'));
 
 // 6) Mispelled word
-var mispelled = function (word1, word2) {
-    let w = word1.length - word2.length > 0 ? word1.length : word2.length;
+function mispelled(a, b) {
+    // Ternary Operator
+    let x = (a.length - b.length > 0) ? a.length : b.length;
+    // console.log(x);
+
+    // Declared & Assigned
     let num = 0;
 
-    for (let i = 0; i < w; i++) {
-        if (word1[i] !== word2[i]) {
+    for (let i = 0; i < x; i++) {
+        if (a[i] !== b[i]) {
+            // reassigned
             num = num + 1;
         }
     }
-
-    return num === 1;
-};
+    // Ternary Operator
+    const result = (num === 1) ? true : false;
+    return result;
+}
 // Invoke function
 console.log(mispelled('versed', 'xersed'));
 
