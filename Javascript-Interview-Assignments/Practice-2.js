@@ -218,6 +218,7 @@ console.log(binarySearch([1, 2, 3, 4, 5, 7, 8, 9], 1));
 console.log(binarySearch([1, 2, 3, 4, 5, 7, 8, 9], 5));
 
 //8) Is a pangram?
+// Process-1
 function pangram(a) {
     // reassigned
     a = a.toLowerCase();
@@ -225,6 +226,20 @@ function pangram(a) {
 
     const result = alphabets.split('').every(function (ele) {
         if (a.indexOf(ele) !== -1) {
+            return true;
+        }
+    })
+    return result;
+}
+// Process-2
+function panagram(a) {
+    // reassigned
+    a = a.toLowerCase();
+
+    const alphabets = 'abcdefghijklmnopqrstuvwxyz';
+
+    const result = [...alphabets].every((char, i) => {
+        if (a.indexOf(char) !== -1) {
             return true;
         }
     })
